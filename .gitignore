@@ -6,4 +6,5 @@ package-lock.json
 yarn.lock
 node_modules/
 public/
+themes/landscape
 .deploy*/
