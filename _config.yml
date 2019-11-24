@@ -95,6 +95,4 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/andygoalkeeper/blog
-  branch: gh-pages
+  type: ''
