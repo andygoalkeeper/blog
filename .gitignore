@@ -1,10 +1,2 @@
-.DS_Store
-Thumbs.db
-db.json
-*.log
-package-lock.json
-yarn.lock
-node_modules/
-public/
-themes/landscape
-.deploy*/
+_site
+node_modules

@@ -1,24 +1,21 @@
 {
-  "name": "anosov-blog",
+  "name": "blog",
   "version": "0.0.1",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andygoalkeeper/blog.git"
+  },
+  "engines": {
+    "node": "10.* || >= 12"
+  },
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "clean": "rm -rf ./_site",
+    "build": "npm run clean && eleventy",
+    "start": "eleventy --serve --watch"
   },
-  "hexo": {
-    "version": "4.0.0"
-  },
-  "dependencies": {
-    "hexo": "4.0.0",
-    "hexo-generator-archive": "1.0.0",
-    "hexo-generator-category": "1.0.0",
-    "hexo-generator-index": "1.0.0",
-    "hexo-generator-tag": "1.0.0",
-    "hexo-renderer-handlebars": "2.0.2",
-    "hexo-renderer-marked": "2.0.0",
-    "hexo-server": "1.0.0"
+  "author": "Andrey Anosov",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "0.12.1"
   }
 }
