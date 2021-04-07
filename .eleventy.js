@@ -1,6 +1,7 @@
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('CNAME');
+  eleventyConfig.addPassthroughCopy('favicon.*');
 
   return {
     dir: {
