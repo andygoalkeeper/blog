@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>anosov.me</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png?20210401">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?20210401">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?20210401">
+  <link rel="shortcut icon" href="favicon.ico?20210401">
+  {% set css %}
+    {% include "fonts.css" %}
+    {% include "layout.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+  <body>
+    <div>
+      anosov.me
+    </div>
+  </body>
+</html>

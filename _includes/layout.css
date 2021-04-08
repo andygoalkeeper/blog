@@ -6,8 +6,8 @@ body {
   padding: 0;
   overflow: hidden;
   color: #24313e;
-  font-family: 'Special Elite', cursive;
-  font-size: 40px;
+  font-family: TT2020, monospace;
+  font-size: 64px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ecf0f1;
@@ -22,12 +22,12 @@ body {
 }
 
 div {
-  width: 240px;
-  height: 48px;
-  line-height: 48px;
+  width: 400px;
+  height: 64px;
+  line-height: 64px;
   left: 50%;
   top: 50%;
-  margin: -24px 0 0 -120px;
+  margin: -32px 0 0 -200px;
   position: absolute;
   text-align: center;
 }
