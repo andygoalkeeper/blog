@@ -13,10 +13,11 @@
     "build": "npm run clean && eleventy",
     "start": "eleventy --serve --watch"
   },
-  "author": "Andrey Anosov",
+  "author": "Andrei Anosov",
   "license": "UNLICENSED",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "3.1.2",
     "clean-css": "5.1.2",
     "html-minifier": "4.0.0"
   }

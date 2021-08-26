@@ -1,33 +1,235 @@
 html,
 body {
-  min-width: 320px;
+  min-width: 240px;
   height: 100%;
+  line-height: 1.2em;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  color: #24313e;
-  font-family: TT2020, monospace;
-  font-size: 64px;
+  color: #222;
+  font-family: monospace;
+  font-size: 1.13em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ecf0f1;
-}
-
-html {
-  overflow-x: auto;
+  background: #fff;
 }
 
 body {
   position: relative;
+  overflow: auto;
+  overflow-y: scroll;
+  font-size: 1.13em;
 }
 
-div {
-  width: 400px;
-  height: 64px;
-  line-height: 64px;
-  left: 50%;
-  top: 50%;
-  margin: -32px 0 0 -200px;
+h1 {
+  line-height: 1em;
+  font-size: 1.6em;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  padding: 0 0.1em;
+  color: #0366d6;
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 1px solid #0366d6;
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+header {
+  height: 4.7em;
+  background: #fafbfc;
+  box-shadow: inset 0 -1px 0 #ebedef;
+}
+
+header > section {
+  width: 768px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+  position: relative;
+}
+
+header a.logo,
+header a.logo:link,
+header a.logo:visited,
+header a.logo:hover,
+header a.logo:active {
+  width: 9.2em;
+  height: 9.2em;
+  left: 0.3em;
+  top: -3.5em;
+  padding: 0;
   position: absolute;
-  text-align: center;
+  border: 1px solid #ebedef;
+  border-radius: 50%;
+  background: #fff 50% 85% no-repeat url(/assets/logo.png);
+  z-index: 1;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  header a.logo,
+  header a.logo:link,
+  header a.logo:visited,
+  header a.logo:hover,
+  header a.logo:active {
+    background-image: url(/assets/logo@2x.png);
+    background-size: 128px 72px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  header a.logo,
+  header a.logo:link,
+  header a.logo:visited,
+  header a.logo:hover,
+  header a.logo:active {
+    background-image: url(/assets/logo@3x.png);
+    background-size: 128px 72px;
+  }
+}
+
+header nav {
+  height: 1em;
+  left: 11.1em;
+  top: 50%;
+  margin-top: -0.5em;
+  position: absolute;
+}
+
+header nav a,
+header nav a:link,
+header nav a:visited,
+header nav a:hover,
+header nav a:active {
+  margin: 0 0.5em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav a:active,
+header nav a[aria-current] {
+  text-decoration: underline;
+}
+
+main {
+  min-height: calc(100% - 8.7em);
+}
+
+main > section {
+  width: 768px;
+  margin: 0 auto;
+  padding: 1.4em 1em 1.2em;
+  position: relative;
+}
+
+footer {
+  font-size: 0.9em;
+  box-shadow: inset 0 1px 0 #ebedef;
+}
+
+footer > section {
+  width: 768px;
+  margin: 0 auto;
+  padding: 1.5em 1em;
+  position: relative;
+}
+
+footer nav {
+  float: right;
+}
+
+footer nav a,
+footer nav a:link,
+footer nav a:visited,
+footer nav a:hover,
+footer nav a:active {
+  margin-left: 0.8em;
+  text-decoration: none;
+}
+
+footer nav a:hover,
+footer nav a:active {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 1em;
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    padding: 0;
+  }
+
+  header {
+    height: 2.35em;
+  }
+
+  header > section,
+  main > section,
+  footer > section {
+    width: auto;
+  }
+
+  header a.logo,
+  header a.logo:link,
+  header a.logo:visited,
+  header a.logo:hover,
+  header a.logo:active {
+    left: -1.8em;
+    top: -4.1em;
+    border-width: 2px;
+    transform: scale(0.5);
+  }
+
+  header nav {
+    left: 7em;
+    font-size: 0.9em;
+  }
+
+  header nav a,
+  header nav a:link,
+  header nav a:visited,
+  header nav a:hover,
+  header nav a:active {
+    margin: 0;
+    padding: 0.5em 0.2em;
+  }
+
+  main {
+    min-height: calc(100% - 7.2em);
+  }
+
+  main > section {
+    padding-top: 0.7em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+
+  footer nav {
+    float: none;
+  }
+
+  footer nav a,
+  footer nav a:link,
+  footer nav a:visited,
+  footer nav a:hover,
+  footer nav a:active {
+    margin: 0 0.2em 0 0;
+  }
 }

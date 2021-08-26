@@ -1,5 +1,6 @@
 const htmlmin = require('html-minifier');
 const cleanCSS = require('clean-css');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('assets');
@@ -24,6 +25,8 @@ module.exports = (eleventyConfig) => {
 
     return content;
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   return {
     dir: {

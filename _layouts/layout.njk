@@ -1,24 +1,50 @@
-<!DOCTYPE html>
-<html>
+---
+author: Andrei Anosov
+---
+
+<!doctype html>
+<html lang="en">
   <head>
-  <title>anosov.me</title>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png?20210401">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?20210401">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?20210401">
-  <link rel="shortcut icon" href="favicon.ico?20210401">
-  {% set css %}
-    {% include "fonts.css" %}
-    {% include "layout.css" %}
-  {% endset %}
-  <style>
-    {{ css | cssmin | safe }}
-  </style>
-</head>
+    <title>{{ title }}{% if title %} | {{ author }}{% else %}{{ author }} | Web developer{% endif %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png?20210825">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?20210825">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?20210825">
+    <link rel="shortcut icon" href="/favicon.ico?20210825">
+    {% set css %}
+      {% include "highlight.css" %}
+      {% include "layout.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+  </head>
   <body>
-    <div>
-      anosov.me
-    </div>
+    <header>
+      <section>
+        <a class="logo" href="/"></a>
+        <nav>
+          <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Blog</a>
+          <a href="/about" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section>
+        {{ content | safe }}
+      </section>
+    </main>
+    <footer>
+      <section>
+        2021 © Andrei Anosov
+        <nav>
+          <a href="mailto:andrei@anosov.me">Email</a>
+          <a href="https://github.com/andygoalkeeper" target="_blank">Github</a>
+          <a href="https://www.linkedin.com/in/andrei-anosov-4918a097" target="_blank">LinkedIn</a>
+        </nav>
+      </section>
+    </footer>
   </body>
 </html>
