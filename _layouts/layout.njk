@@ -27,6 +27,8 @@ author: Andrei Anosov
         <a class="logo" href="/"></a>
         <nav>
           <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Blog</a>
+          {#<a href="/articles" {% if page.url == '/articles/' %}aria-current="page"{% endif %}>Articles</a>#}
+          <a href="/snippets" {% if page.url == '/snippets/' %}aria-current="page"{% endif %}>Snippets</a>
           <a href="/about" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
         </nav>
       </section>
@@ -38,7 +40,7 @@ author: Andrei Anosov
     </main>
     <footer>
       <section>
-        2021 © Andrei Anosov
+        2021 © {{ author }}
         <nav>
           <a href="mailto:andrei@anosov.me">Email</a>
           <a href="https://github.com/andygoalkeeper" target="_blank">Github</a>

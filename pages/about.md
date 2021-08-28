@@ -2,6 +2,7 @@
 layout: article.njk
 title: About me
 permalink: "about/index.html"
+eleventyExcludeFromCollections: true
 ---
 
 # {{ title }}

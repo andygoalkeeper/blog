@@ -1,8 +1,11 @@
 const htmlmin = require('html-minifier');
 const cleanCSS = require('clean-css');
+const markdownIt = require('markdown-it');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = (eleventyConfig) => {
+  const md = new markdownIt({ html: true });
+
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('CNAME');
   eleventyConfig.addPassthroughCopy('favicon*');
@@ -26,7 +29,19 @@ module.exports = (eleventyConfig) => {
     return content;
   });
 
+  eleventyConfig.addPairedShortcode('markdown', (content) => {
+    return md.render(content);
+  });
+
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addCollection('articles', (collectionApi) => {
+    return collectionApi.getFilteredByTag('article').sort((a, b) => a.data.title.localeCompare(b.data.title));
+  });
+
+  eleventyConfig.addCollection('snippets', (collectionApi) => {
+    return collectionApi.getFilteredByTag('snippet').sort((a, b) => a.data.title.localeCompare(b.data.title));
+  });
 
   return {
     dir: {
@@ -37,6 +52,7 @@ module.exports = (eleventyConfig) => {
     templateFormats: [
       'html',
       'md',
+      'njk',
     ],
   };
 };

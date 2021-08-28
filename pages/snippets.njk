@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+title: Snippets
+permalink: "snippets/index.html"
+eleventyExcludeFromCollections: true
+---
+
+<h1>{{ title }}</h1>
+
+<table>
+  <tbody>
+    {%- for snippet in collections.snippets -%}
+      <tr>
+        <td>
+          <a href="{{ snippet.url }}">
+            {{ snippet.data.title }}
+          </a>
+        </td>
+        <td>
+          <div>
+            {{ snippet.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) }}
+          </div>
+          <div>
+            {{ snippet.date.toLocaleDateString('en-US', { year: 'numeric' }) }}
+          </div>
+        </td>
+      </tr>
+    {%- endfor -%}
+  </tbody>
+</table>

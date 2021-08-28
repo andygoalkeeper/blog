@@ -1,0 +1,22 @@
+---
+layout: article.njk
+title: How to format dates in 11ty
+date: 2021-08-28
+tags: ['post', 'snippet']
+permalink: "how-to-format-dates-in-11ty/index.html"
+annotation: Elegant date formatting in Eleventy's nunjucks templates.
+---
+
+{% include 'title.njk' %}
+
+{% markdown %}
+Just use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString" target="_blank">Date.prototype.toLocaleDateString()</a>.
+{% endmarkdown %}
+
+{% highlight 'hbs' %}
+{% raw %}
+<time pubdate datetime="{{ post.date.toISOString() }}">
+  {{ post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
+</time>
+{% endraw %}
+{% endhighlight %}

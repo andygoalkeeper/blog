@@ -1,0 +1,16 @@
+---
+layout: article.njk
+title: How to test images for retina screens
+date: 2020-07-10
+tags: ['post', 'snippet']
+permalink: "how-to-test-images-for-retina-screens/index.html"
+annotation: So, you actually can using Firefox and option <code>layout.css.devPixelsPerPx</code>.
+---
+
+{% include 'title.njk' %}
+
+{% markdown %}
+1. Go to `about:config` in address bar.
+2. Find  `layout.css.devPixelsPerPx`.
+3. Change it to your desired ratio (use 2 or 3 for retina).
+{% endmarkdown %}

@@ -1,0 +1,30 @@
+---
+layout: layout.njk
+title: Articles
+permalink: "articles/index.html"
+eleventyExcludeFromCollections: true
+---
+
+<h1>{{ title }}</h1>
+
+<table>
+  <tbody>
+    {%- for article in collections.articles -%}
+      <tr>
+        <td>
+          <a href="{{ article.url }}">
+            {{ article.data.title }}
+          </a>
+        </td>
+        <td>
+          <div>
+            {{ snippet.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) }}
+          </div>
+          <div>
+            {{ snippet.date.toLocaleDateString('en-US', { year: 'numeric' }) }}
+          </div>
+        </td>
+      </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
