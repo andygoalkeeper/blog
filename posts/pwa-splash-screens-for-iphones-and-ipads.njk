@@ -1,0 +1,82 @@
+---
+layout: article.njk
+title: PWA splash screens for iPhones and iPads
+date: 2021-05-23
+tags: ['post', 'snippet']
+permalink: "pwa-splash-screens-for-iphones-and-ipads/index.html"
+annotation: Set of sizes for all actual iPhones and iPads with PWA support.
+---
+
+{% include 'title.njk' %}
+
+{% highlight 'html' %}
+<!-- iPhone SE (640px x 1136px) -->
+<link rel="apple-touch-startup-image" href="/launch-640x1136.png"
+  media="(device-width: 320px) and (device-height: 568px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- iPhone SE 2020, 8, 7, 6s, 6 (750px x 1334px) -->
+<link rel="apple-touch-startup-image" href="/launch-750x1334.png"
+  media="(device-width: 375px) and (device-height: 667px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+<link rel="apple-touch-startup-image" href="/launch-1242x2208.png"
+  media="(device-width: 414px) and (device-height: 736px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- iPhone 11 Pro, X, Xs (1125px x 2436px) -->
+<link rel="apple-touch-startup-image" href="/launch-1125x2436.png"
+  media="(device-width: 375px) and (device-height: 812px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- iPhone 11, Xr (828px x 1792px) -->
+<link rel="apple-touch-startup-image" href="/launch-828x1792.png"
+  media="(device-width: 414px) and (device-height: 896px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- iPhone 11 Pro Max, Xs Max (1242px x 2688px) -->
+<link rel="apple-touch-startup-image" href="/launch-1242x2688.png"
+  media="(device-width: 414px) and (device-height: 896px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- iPhone 12 mini (1080px x 2340px) -->
+<link rel="apple-touch-startup-image" href="/launch-1080x2340.png"
+  media="(device-width: 360px) and (device-height: 780px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- iPhone 12, 12 Pro (1170px x 2532px) -->
+<link rel="apple-touch-startup-image" href="/launch-1170x2532.png"
+  media="(device-width: 390px) and (device-height: 844px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- iPhone 12 Pro Max (1284px x 2778px) -->
+<link rel="apple-touch-startup-image" href="/launch-1284x2778.png"
+  media="(device-width: 428px) and (device-height: 926px) and
+         (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+
+<!-- 7.9" iPad mini, 9.7" iPad (1536px x 2048px) -->
+<link rel="apple-touch-startup-image" href="/launch-1536x2048.png"
+  media="(device-width: 768px) and (device-height: 1024px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- 10.2" iPad (1620px x 2160px) -->
+<link rel="apple-touch-startup-image" href="/launch-1620x2160.png"
+  media="(device-width: 810px) and (device-height: 1080px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- 10.5" iPad Pro (1668px x 2224px) -->
+<link rel="apple-touch-startup-image" href="/launch-1668x2224.png"
+  media="(device-width: 834px) and (device-height: 1112px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- 11" iPad Pro (1668px x 2388px) -->
+<link rel="apple-touch-startup-image" href="/launch-1668x2388.png"
+  media="(device-width: 834px) and (device-height: 1194px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
+<!-- 12.9" iPad Pro (2048px x 2732px) -->
+<link rel="apple-touch-startup-image" href="/launch-2048x2732.png"
+  media="(device-width: 1024px) and (device-height: 1366px) and
+         (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+{% endhighlight %}
